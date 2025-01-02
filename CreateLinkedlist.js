@@ -10,7 +10,7 @@ class LinkedList {
         this.head = null; // Start with an empty list
     }
 
-    // Method to add a node at the end
+   
     addNode(value) {
         const newNode = new ListNode(value);
         if (!this.head) {
@@ -24,7 +24,7 @@ class LinkedList {
         }
     }
 
-    // Method to print the linked list
+
     printList() {
         let current = this.head;
         const result = [];
@@ -36,7 +36,7 @@ class LinkedList {
     }
 }
 
-// Test the linked list
+
 const list = new LinkedList();
 list.addNode(10);
 list.addNode(20);
