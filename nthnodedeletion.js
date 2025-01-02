@@ -1,11 +1,14 @@
-class ListNode {
-    constructor(value) {
+class ListNode 
+{
+    constructor(value) 
+    {
         this.value = value;
         this.next = null;
     }
 }
 
-function deleteNthFromEnd(head, n) {
+function deleteNthFromEnd(head, n) 
+{
     let dummy = new ListNode(0); 
     dummy.next = head;
 
@@ -13,13 +16,15 @@ function deleteNthFromEnd(head, n) {
     let slow = dummy;
 
     
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i <= n; i++)
+        {
         if (!fast) return head; 
         fast = fast.next;
     }
 
     
-    while (fast) {
+    while (fast) 
+    {
         fast = fast.next;
         slow = slow.next;
     }
@@ -31,11 +36,13 @@ function deleteNthFromEnd(head, n) {
 }
 
 
-function createLinkedList(arr) {
+function createLinkedList(arr) 
+{
     if (arr.length === 0) return null;
     let head = new ListNode(arr[0]);
     let current = head;
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) 
+    {
         current.next = new ListNode(arr[i]);
         current = current.next;
     }
@@ -43,7 +50,8 @@ function createLinkedList(arr) {
 }
 
 
-function printLinkedList(head) {
+function printLinkedList(head) 
+{
     let result = [];
     let current = head;
     while (current) {
