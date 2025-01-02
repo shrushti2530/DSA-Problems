@@ -1,15 +1,19 @@
-class ListNode {
-    constructor(value) {
+class ListNode 
+{
+    constructor(value) 
+    {
         this.value = value;
         this.next = null;
     }
 }
 
-function isPalindromeLinkedList(head) {
+function isPalindromeLinkedList(head) 
+{
     let values = [];
     let current = head;
 
-    while (current) {
+    while (current) 
+    {
         values.push(current.value);
         current = current.next;
     }
@@ -17,7 +21,8 @@ function isPalindromeLinkedList(head) {
   
     let right = values.length - 1;
 
-    while (left < right) {
+    while (left < right) 
+    {
         if (values[left] !== values[right]) return false;
         left++;
         right--;
@@ -28,10 +33,12 @@ function isPalindromeLinkedList(head) {
 
 
 function createLinkedList(arr) {
+    
     if (arr.length === 0) return null;
     let head = new ListNode(arr[0]);
     let current = head;
-    for (let i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) 
+    {
         current.next = new ListNode(arr[i]);
         current = current.next;
     }
